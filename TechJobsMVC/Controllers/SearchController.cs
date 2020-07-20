@@ -23,12 +23,12 @@ namespace TechJobsMVC.Controllers
         {
             List<Job> jobs;
             ViewBag.columns = ListController.ColumnChoices;
-            if (searchType == "all")
+            if (searchType == "all" && searchTerm!=null)
             {
                 jobs = JobData.FindByValue(searchTerm);
                 ViewBag.Title = "All Jobs";
             }
-            else if (searchTerm == null)
+            else if (searchTerm == null || (searchType=="all" && searchTerm == null))
             {
                 jobs = JobData.FindAll();
                 ViewBag.Title = "All Jobs";

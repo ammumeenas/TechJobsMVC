@@ -9,7 +9,7 @@
             @foreach (var column in ViewBag.columns)
             {
                 <span>
-                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key" />
+                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
                     <label for="@column.Key">@column.Value</label>
                 </span>
             }
@@ -44,7 +44,7 @@
             <td>@item.Name</td>
         <tr>
             <td>Employer</td>
-            <td>@item.Employer</td>
+            <td>@item.Employer</td>        
         <tr>
             <td>Location</td>
             <td>@item.Location</td>

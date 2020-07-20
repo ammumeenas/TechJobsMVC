@@ -15,18 +15,20 @@
         <td>@item.Name</td>
     <tr>
         <td>Employer</td>
-        <td>@item.Employer</td>
+        <td><a asp-route-column="employer" asp-route-value="@item.Employer">@item.Employer</a></td>
     <tr>
         <td>Location</td>
-        <td>@item.Location</td>
+        <td><a asp-route-column="location" asp-route-value="@item.Location">@item.Location</a></td>
+    <tr>
     </tr>
     <tr>
         <td>Position Type</td>
-        <td>@item.PositionType</td>
+        <td><a asp-route-column="positionType" asp-route-value="@item.PositionType">@item.PositionType</a></td>
     </tr>
     <tr>
         <td>Skill</td>
-        <td>@item.CoreCompetency</td></tr>
+        <td><a asp-route-column="coreCompetency" asp-route-value="@item.CoreCompetency">@item.CoreCompetency</a></td>
+    </tr>
 
 
 
