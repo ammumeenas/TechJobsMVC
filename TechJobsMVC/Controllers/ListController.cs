@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,7 @@ namespace TechJobsMVC.Controllers
         // list jobs by column and value
         public IActionResult Jobs(string column, string value)
         {
+            ViewBag.columns = ColumnChoices;
             List<Job> jobs;
             if (column.ToLower().Equals("all"))
             {
